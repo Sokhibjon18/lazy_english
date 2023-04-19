@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lazy_english/features/challange/pages/challange_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Center(child: Text('Center')),
+        body: ChallangePage(),
+        
       ),
     );
   }
