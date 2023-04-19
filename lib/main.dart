@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lazy_english/features/authentication/pages/authentication_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(child: Text('Center')),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: AuthenticationPage(),
     );
   }
 }
