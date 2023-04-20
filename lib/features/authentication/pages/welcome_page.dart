@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page/sign_in_page.dart';
-import 'package:lazy_english/features/authentication/pages/user_info_page.dart';
+
+import 'sign_in_page/sign_in_page.dart';
+import 'user_info_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -54,15 +55,13 @@ class _WelcomePageState extends State<WelcomePage> {
           Expanded(child: Container()),
           Divider(color: Colors.grey.withOpacity(0.6)),
           Padding(
-            padding:
-                const EdgeInsets.only(left: 24, right: 24, bottom: 24, top: 12),
+            padding: const EdgeInsets.only(left: 24, right: 24, bottom: 24, top: 12),
             child: SizedBox(
               width: double.infinity,
               height: 58,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => const UserInfoPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const UserInfoPage()));
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF6949FF),

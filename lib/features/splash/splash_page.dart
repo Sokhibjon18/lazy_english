@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/welcome_page.dart';
+import '../authentication/pages/welcome_page.dart';
 
-class AuthenticationPage extends StatefulWidget {
-  const AuthenticationPage({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<AuthenticationPage> createState() => _AuthenticationPageState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _AuthenticationPageState extends State<AuthenticationPage> {
+class _SplashPageState extends State<SplashPage> {
   Future<void> goToWelcomePage() {
     return Future.delayed(
       const Duration(seconds: 3),
@@ -20,8 +20,13 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
     goToWelcomePage();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(

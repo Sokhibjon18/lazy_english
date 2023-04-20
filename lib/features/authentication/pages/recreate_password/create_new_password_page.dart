@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/recreate_password/complete_resetting_password.dart';
-import 'package:lazy_english/features/authentication/pages/recreate_password/widgets/create_password_textfield.dart';
+import 'complete_resetting_password.dart';
+import 'widgets/create_password_textfield.dart';
 
 class CreateNewPasswordForSignIn extends StatefulWidget {
   const CreateNewPasswordForSignIn({super.key});
 
   @override
-  State<CreateNewPasswordForSignIn> createState() =>
-      _CreateNewPasswordForSignInState();
+  State<CreateNewPasswordForSignIn> createState() => _CreateNewPasswordForSignInState();
 }
 
 bool isVisible = false;
 bool checkIsVisible = false;
 bool isChecked = false;
 
-class _CreateNewPasswordForSignInState
-    extends State<CreateNewPasswordForSignIn> {
+class _CreateNewPasswordForSignInState extends State<CreateNewPasswordForSignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,13 +67,11 @@ class _CreateNewPasswordForSignInState
                           isChecked = value!;
                         });
                       },
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                     ),
                     const Text(
                       'Remember me',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                      style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
                     ),
                   ],
                 ),
@@ -86,8 +82,7 @@ class _CreateNewPasswordForSignInState
             children: [
               Divider(color: Colors.grey.withOpacity(0.6)),
               Padding(
-                padding: const EdgeInsets.only(
-                    bottom: 32, left: 24, right: 24, top: 24),
+                padding: const EdgeInsets.only(bottom: 32, left: 24, right: 24, top: 24),
                 child: SizedBox(
                   width: double.infinity,
                   height: 58,

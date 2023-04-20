@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/challange/widgets/badget_button/badget_button.dart';
-import 'package:lazy_english/features/challange/widgets/challange_appBar.dart';
-import 'package:lazy_english/features/challange/widgets/target_button/target.dart';
+import 'widgets/badget_button/badget_button.dart';
+import 'widgets/challange_appBar.dart';
+import 'widgets/target_button/target.dart';
 
 class ChallangePage extends StatefulWidget {
   const ChallangePage({super.key});
@@ -34,9 +34,8 @@ class _ChallangePageState extends State<ChallangePage> {
                     child: Container(
                       height: 45,
                       decoration: BoxDecoration(
-                          color: _selected == true
-                              ? const Color(0xFF6949FF)
-                              : const Color(0xFFFFFFFF),
+                          color:
+                              _selected == true ? const Color(0xFF6949FF) : const Color(0xFFFFFFFF),
                           border: Border.all(color: const Color(0xFF6949FF)),
                           borderRadius: BorderRadius.circular(100)),
                       child: TextButton(

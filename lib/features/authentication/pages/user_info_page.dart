@@ -2,12 +2,12 @@ import 'dart:developer';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/complete_profile_page.dart';
-import 'package:lazy_english/features/authentication/pages/widgets/create_signup_password.dart';
-import 'package:lazy_english/features/authentication/pages/widgets/email_address.dart';
+import 'complete_profile_page.dart';
+import 'widgets/create_signup_password.dart';
+import 'widgets/email_address.dart';
 
-import 'package:lazy_english/features/authentication/pages/widgets/top_progress_bar.dart';
-import 'package:lazy_english/features/authentication/pages/widgets/take_user_info.dart';
+import 'widgets/top_progress_bar.dart';
+import 'widgets/take_user_info.dart';
 
 class UserInfoPage extends StatefulWidget {
   const UserInfoPage({super.key});
@@ -54,8 +54,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
           CarouselSlider.builder(
             carouselController: carouselController,
             itemCount: 4,
-            itemBuilder:
-                (BuildContext context, int itemIndex, int pageViewIndex) {
+            itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
               currentPage = pageViewIndex;
               return carouselSwitch(pageViewIndex);
             },
@@ -68,8 +67,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
             children: [
               Divider(color: Colors.grey.withOpacity(0.6)),
               Padding(
-                padding: const EdgeInsets.only(
-                    left: 24, right: 24, top: 24, bottom: 32),
+                padding: const EdgeInsets.only(left: 24, right: 24, top: 24, bottom: 32),
                 child: SizedBox(
                   width: double.infinity,
                   height: 58,

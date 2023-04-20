@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/challange/widgets/badget_button/list_info_badget.dart';
+import 'list_info_badget.dart';
 
 class BadgetList extends StatefulWidget {
   const BadgetList({super.key});
@@ -30,16 +30,12 @@ class _BadgetListState extends State<BadgetList> {
                       const Text(
                         'This Year',
                         style: TextStyle(
-                            color: Color(0xFF212121),
-                            fontSize: 24,
-                            fontWeight: FontWeight.w700),
+                            color: Color(0xFF212121), fontSize: 24, fontWeight: FontWeight.w700),
                       ),
                       Text(
                         '${listInfoBadges[index].length} badges',
                         style: const TextStyle(
-                            color: Color(0xFF616161),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700),
+                            color: Color(0xFF616161), fontSize: 20, fontWeight: FontWeight.w700),
                       )
                     ],
                   ),
@@ -52,8 +48,7 @@ class _BadgetListState extends State<BadgetList> {
                       padding: const EdgeInsets.all(24.0),
                       child: Container(
                         decoration: const BoxDecoration(
-                            border: Border(
-                                top: BorderSide(color: Color(0xFFEEEEEE)))),
+                            border: Border(top: BorderSide(color: Color(0xFFEEEEEE)))),
                         child: Padding(
                           padding: const EdgeInsets.only(top: 24),
                           child: Row(
@@ -62,8 +57,7 @@ class _BadgetListState extends State<BadgetList> {
                               SizedBox(
                                 height: MediaQuery.of(context).size.height / 9,
                                 width: MediaQuery.of(context).size.height / 9,
-                                child: Image.asset(listInfoBadges[index][number]
-                                    .badgetImageName),
+                                child: Image.asset(listInfoBadges[index][number].badgetImageName),
                               ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,8 +79,7 @@ class _BadgetListState extends State<BadgetList> {
                                             color: Color(0xFF616161)),
                                       ),
                                       const Padding(
-                                        padding:
-                                            EdgeInsets.only(left: 8, right: 8),
+                                        padding: EdgeInsets.only(left: 8, right: 8),
                                         child: Icon(
                                           Icons.circle,
                                           size: 10,

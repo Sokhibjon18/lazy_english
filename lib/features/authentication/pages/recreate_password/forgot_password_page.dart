@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/recreate_password/virification_code_page.dart';
+import 'virification_code_page.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
@@ -62,8 +62,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             children: [
               Divider(color: Colors.grey.withOpacity(0.6)),
               Padding(
-                padding: const EdgeInsets.only(
-                    bottom: 32, left: 24, right: 24, top: 24),
+                padding: const EdgeInsets.only(bottom: 32, left: 24, right: 24, top: 24),
                 child: SizedBox(
                   width: double.infinity,
                   height: 58,

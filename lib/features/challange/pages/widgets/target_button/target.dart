@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/challange/widgets/target_button/target_widgets/target_challenge_list.dart';
-import 'package:lazy_english/features/challange/widgets/target_button/target_widgets/target_list.dart';
+import 'target_widgets/target_challenge_list.dart';
+import 'target_widgets/target_list.dart';
 
 class TargetButton extends StatefulWidget {
   const TargetButton({super.key});

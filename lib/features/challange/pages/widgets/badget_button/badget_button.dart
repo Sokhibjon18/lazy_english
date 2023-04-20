@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/challange/widgets/badget_button/badget_list.dart';
+
+import 'badget_list.dart';
 
 class BadgetButton extends StatefulWidget {
   const BadgetButton({super.key});

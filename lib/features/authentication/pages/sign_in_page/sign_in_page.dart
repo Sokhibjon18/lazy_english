@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/recreate_password/forgot_password_page.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page/widgets/sign_in_checkbox.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page/widgets/sign_in_textfields.dart';
+import '../recreate_password/forgot_password_page.dart';
+import 'widgets/sign_in_checkbox.dart';
+import 'widgets/sign_in_textfields.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -68,8 +68,7 @@ class _SignInPageState extends State<SignInPage> {
             children: [
               Divider(color: Colors.grey.withOpacity(0.6)),
               Padding(
-                padding: const EdgeInsets.only(
-                    bottom: 32, left: 24, right: 24, top: 24),
+                padding: const EdgeInsets.only(bottom: 32, left: 24, right: 24, top: 24),
                 child: SizedBox(
                   width: double.infinity,
                   height: 58,

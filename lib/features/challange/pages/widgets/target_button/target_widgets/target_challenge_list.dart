@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/challange/widgets/target_button/target_challenge_info.dart';
+import '../target_challenge_info.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class TargetChallengeList extends StatefulWidget {
@@ -26,8 +26,7 @@ class _TargetChallengeListState extends State<TargetChallengeList> {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30)),
+                        topLeft: Radius.circular(30), topRight: Radius.circular(30)),
                     color: targetChallengeInfo[index].colors,
                   ),
                   child: Padding(
@@ -44,21 +43,17 @@ class _TargetChallengeListState extends State<TargetChallengeList> {
                                 child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(
-                                        backgroundColor:
-                                            const Color(0xFF6949FF),
+                                        backgroundColor: const Color(0xFF6949FF),
                                         shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(100))),
+                                            borderRadius: BorderRadius.circular(100))),
                                     child: Text(
                                       targetChallengeInfo[index].buttonName,
                                       style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w600),
+                                          fontSize: 14, fontWeight: FontWeight.w600),
                                     )),
                               ),
                               Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 12, bottom: 12),
+                                padding: const EdgeInsets.only(top: 12, bottom: 12),
                                 child: Text(
                                   targetChallengeInfo[index].level,
                                   style: const TextStyle(
@@ -77,9 +72,7 @@ class _TargetChallengeListState extends State<TargetChallengeList> {
                             ],
                           ),
                         ),
-                        Expanded(
-                            child: Image.asset(
-                                targetChallengeInfo[index].imageName))
+                        Expanded(child: Image.asset(targetChallengeInfo[index].imageName))
                       ],
                     ),
                   ),
@@ -87,10 +80,8 @@ class _TargetChallengeListState extends State<TargetChallengeList> {
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(30),
-                          bottomRight: Radius.circular(30)),
-                      border:
-                          Border.all(color: targetChallengeInfo[index].colors)),
+                          bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
+                      border: Border.all(color: targetChallengeInfo[index].colors)),
                   child: Padding(
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
@@ -128,8 +119,7 @@ class _TargetChallengeListState extends State<TargetChallengeList> {
                         ),
                         Container(
                           decoration: const BoxDecoration(
-                              border: Border(
-                                  top: BorderSide(color: Color(0xFFEEEEEE)))),
+                              border: Border(top: BorderSide(color: Color(0xFFEEEEEE)))),
                           child: Padding(
                             padding: const EdgeInsets.only(top: 16),
                             child: Row(

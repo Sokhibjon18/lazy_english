@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/recreate_password/create_new_password_page.dart';
+import 'create_new_password_page.dart';
 
-import 'package:lazy_english/features/authentication/pages/sign_in_page/widgets/countdown.dart';
+import '../sign_in_page/widgets/countdown.dart';
 
 import 'package:pinput/pinput.dart';
 
@@ -21,8 +21,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Padding(
-        padding:
-            const EdgeInsets.only(top: 48, left: 24, right: 24, bottom: 32),
+        padding: const EdgeInsets.only(top: 48, left: 24, right: 24, bottom: 32),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

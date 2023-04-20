@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/challange/pages/list_info.dart';
+import '../../../list_info.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class TargetListState extends StatefulWidget {
@@ -27,8 +27,8 @@ class _TargetListStateState extends State<TargetListState> {
               child: Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(
-                        bottom: 34.13, top: 36.5, left: 26.5, right: 25.29),
+                    padding:
+                        const EdgeInsets.only(bottom: 34.13, top: 36.5, left: 26.5, right: 25.29),
                     child: SizedBox(
                         height: 52.37,
                         width: 52.21,
@@ -40,9 +40,7 @@ class _TargetListStateState extends State<TargetListState> {
                       Text(
                         infoList[index].coins,
                         style: const TextStyle(
-                            color: Color(0xFF212121),
-                            fontSize: 24,
-                            fontWeight: FontWeight.w700),
+                            color: Color(0xFF212121), fontSize: 24, fontWeight: FontWeight.w700),
                       ),
                       const SizedBox(height: 16.25),
                       Row(
