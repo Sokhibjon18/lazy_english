@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lazy_english/features/challange/widgets/badget_button/badget_list.dart';
-import 'package:lazy_english/features/challange/widgets/badget_button/badget_list2.dart';
-import 'package:lazy_english/features/challange/widgets/badget_button/badget_list3.dart';
 
 class BadgetButton extends StatefulWidget {
   const BadgetButton({super.key});
@@ -20,9 +18,7 @@ class _BadgetButtonState extends State<BadgetButton> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
-            BadgetListState(),
-            BadgetListState2(),
-            BadgetListState3()
+            BadgetList(),
           ],
         ),
       ),

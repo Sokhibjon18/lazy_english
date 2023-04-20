@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/challange/widgets/target_button/target_widgets/target_fourth_info.dart';
-import 'package:lazy_english/features/challange/widgets/target_button/target_widgets/target_second_info.dart';
+import 'package:lazy_english/features/challange/widgets/target_button/target_widgets/target_challenge_list.dart';
 import 'package:lazy_english/features/challange/widgets/target_button/target_widgets/target_list.dart';
-import 'package:lazy_english/features/challange/widgets/target_button/target_widgets/target_thirt_info.dart';
 
 class TargetButton extends StatefulWidget {
   const TargetButton({super.key});
@@ -52,9 +50,7 @@ class _TargetButtonState extends State<TargetButton> {
               )
             ],
           ),
-          const TargetList2(),
-          const TargetList3(),
-          const TargetList4(),
+          const TargetChallengeList()
         ],
       ),
     );
