@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page.dart/sign_in_page.dart';
+import 'package:lazy_english/features/authentication/pages/sign_in_page/sign_in_page.dart';
 import 'package:lazy_english/features/authentication/pages/user_info_page.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -31,7 +31,7 @@ class _WelcomePageState extends State<WelcomePage> {
           const Image(
             height: 215,
             width: 142,
-            image: AssetImage('assets/auth_images/greeting.png'),
+            image: AssetImage('assets/images/greeting.png'),
           ),
           const Text(
             'ELingo',

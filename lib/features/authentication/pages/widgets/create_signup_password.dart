@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CreateNewPasswordPage extends StatefulWidget {
-  const CreateNewPasswordPage({super.key});
+class CreateNewPassword extends StatefulWidget {
+  const CreateNewPassword({super.key});
 
   @override
-  State<CreateNewPasswordPage> createState() => _CreateNewPasswordPageState();
+  State<CreateNewPassword> createState() => _CreateNewPasswordState();
 }
 
 bool obscured = false;
 
-class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
+class _CreateNewPasswordState extends State<CreateNewPassword> {
   @override
   Widget build(BuildContext context) {
     return Padding(

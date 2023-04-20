@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page.dart/virification_code_page.dart';
+import 'package:lazy_english/features/authentication/pages/recreate_password/virification_code_page.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});

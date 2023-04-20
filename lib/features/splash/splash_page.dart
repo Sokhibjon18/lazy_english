@@ -33,7 +33,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
               child: Image(
                 height: 173,
                 width: 173,
-                image: AssetImage('assets/auth_images/main_image.png'),
+                image: AssetImage('assets/images/main_image.png'),
               ),
             ),
           ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page.dart/create_new_password_page.dart';
+import 'package:lazy_english/features/authentication/pages/recreate_password/create_new_password_page.dart';
 
-import 'package:lazy_english/features/authentication/pages/sign_in_page.dart/widgets/countdown.dart';
+import 'package:lazy_english/features/authentication/pages/sign_in_page/widgets/countdown.dart';
 
 import 'package:pinput/pinput.dart';
 

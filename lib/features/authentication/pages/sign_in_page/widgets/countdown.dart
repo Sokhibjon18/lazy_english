@@ -31,10 +31,9 @@ class _CountDownWidgetState extends State<CountDownWidget> {
   }
 
   void removeTime() {
-    const removeSeconds = 1;
     widget.onTicked();
     setState(() {
-      final seconds = duration.inSeconds - removeSeconds;
+      final seconds = duration.inSeconds - 1;
 
       if (seconds < 0) {
         timer?.cancel();

@@ -1,11 +1,13 @@
+import 'dart:developer';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:lazy_english/features/authentication/pages/complete_profile_page.dart';
-import 'package:lazy_english/features/authentication/pages/widgets/create_password.dart';
+import 'package:lazy_english/features/authentication/pages/widgets/create_signup_password.dart';
 import 'package:lazy_english/features/authentication/pages/widgets/email_address.dart';
-import 'package:lazy_english/features/authentication/pages/widgets/user_age.dart';
-import 'package:lazy_english/features/authentication/pages/widgets/user_name.dart';
-import 'package:lazy_english/features/authentication/pages/widgets/linear_percent_indicator.dart';
+
+import 'package:lazy_english/features/authentication/pages/widgets/top_progress_bar.dart';
+import 'package:lazy_english/features/authentication/pages/widgets/take_user_info.dart';
 
 class UserInfoPage extends StatefulWidget {
   const UserInfoPage({super.key});
@@ -30,6 +32,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
             setState(() {});
             if (currentPage == 0) {
               Navigator.pop(context);
+              percent = 0.25;
             } else {
               carouselController.previousPage();
               percent = percent - 0.25;
@@ -40,7 +43,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
         title: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: Center(
-            child: LinearPercentIndicatorWidget(linearPercent: percent),
+            child: TopProgressBar(linearPercent: percent),
           ),
         ),
         elevation: 0,
@@ -54,13 +57,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
             itemBuilder:
                 (BuildContext context, int itemIndex, int pageViewIndex) {
               currentPage = pageViewIndex;
-              return pageViewIndex == 0
-                  ? const TakeUserNamePage()
-                  : pageViewIndex == 1
-                      ? const TakeUserAgePage()
-                      : pageViewIndex == 2
-                          ? const CreateNewPasswordPage()
-                          : const EmailAddressPage();
+              return carouselSwitch(pageViewIndex);
             },
             options: CarouselOptions(
               viewportFraction: 1.0,
@@ -105,5 +102,26 @@ class _UserInfoPageState extends State<UserInfoPage> {
         ],
       ),
     );
+  }
+
+  Widget carouselSwitch(int index) {
+    switch (index) {
+      case 0:
+        return const TakeUserInfo(
+          questionText: 'What is your name? 🧑 👩',
+          whatToWriteInTextfield: 'Full Name',
+        );
+      case 1:
+        return const TakeUserInfo(
+          questionText: 'How old are you? 🎂',
+          whatToWriteInTextfield: 'Age',
+        );
+      case 2:
+        return const EmailAddress();
+      case 3:
+        return const CreateNewPassword();
+      default:
+    }
+    return Container();
   }
 }

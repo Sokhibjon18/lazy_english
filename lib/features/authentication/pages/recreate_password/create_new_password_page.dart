@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page.dart/complete_resetting_password.dart';
+import 'package:lazy_english/features/authentication/pages/recreate_password/complete_resetting_password.dart';
+import 'package:lazy_english/features/authentication/pages/recreate_password/widgets/create_password_textfield.dart';
 
 class CreateNewPasswordForSignIn extends StatefulWidget {
   const CreateNewPasswordForSignIn({super.key});
@@ -49,63 +50,13 @@ class _CreateNewPasswordForSignInState
                   'Create a new password',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
-                TextField(
-                  obscureText: isVisible,
-                  style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  decoration: InputDecoration(
-                    focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFF6949FF),
-                      ),
-                    ),
-                    suffixIcon: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          isVisible = !isVisible;
-                        });
-                      },
-                      child: Icon(
-                        isVisible ? Icons.visibility : Icons.visibility_off,
-                      ),
-                    ),
-                  ),
-                  cursorColor: const Color(0xFF6949FF),
-                ),
+                CreatePasswordTextfield(isVisible: isVisible),
                 const SizedBox(height: 32),
                 const Text(
                   'Confirm a new password',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
-                TextField(
-                  obscureText: checkIsVisible,
-                  style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  decoration: InputDecoration(
-                    focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFF6949FF),
-                      ),
-                    ),
-                    suffixIcon: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          checkIsVisible = !checkIsVisible;
-                        });
-                      },
-                      child: Icon(
-                        checkIsVisible
-                            ? Icons.visibility
-                            : Icons.visibility_off,
-                      ),
-                    ),
-                  ),
-                  cursorColor: const Color(0xFF6949FF),
-                ),
+                CreatePasswordTextfield(isVisible: isChecked),
                 const SizedBox(height: 24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,

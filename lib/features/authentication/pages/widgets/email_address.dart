@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class EmailAddressPage extends StatefulWidget {
-  const EmailAddressPage({super.key});
+class EmailAddress extends StatefulWidget {
+  const EmailAddress({super.key});
 
   @override
-  State<EmailAddressPage> createState() => _EmailAddressPageState();
+  State<EmailAddress> createState() => _EmailAddressState();
 }
 
-class _EmailAddressPageState extends State<EmailAddressPage> {
+class _EmailAddressState extends State<EmailAddress> {
   @override
   Widget build(BuildContext context) {
     return Padding(

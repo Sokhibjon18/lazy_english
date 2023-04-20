@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page.dart/forgot_password_page.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page.dart/widgets/sign_in_checkbox.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page.dart/widgets/sign_in_textfields.dart';
+import 'package:lazy_english/features/authentication/pages/recreate_password/forgot_password_page.dart';
+import 'package:lazy_english/features/authentication/pages/sign_in_page/widgets/sign_in_checkbox.dart';
+import 'package:lazy_english/features/authentication/pages/sign_in_page/widgets/sign_in_textfields.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});

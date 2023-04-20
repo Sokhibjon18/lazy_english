@@ -26,7 +26,7 @@ class CompleteResettingPasswordPage extends StatelessWidget {
           const Image(
             height: 231,
             width: 230,
-            image: AssetImage('assets/auth_images/auth_completed.png'),
+            image: AssetImage('assets/images/auth_completed.png'),
           ),
           const SizedBox(height: 40),
           const Text(

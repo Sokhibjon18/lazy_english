@@ -29,7 +29,7 @@ class CompleteProfile extends StatelessWidget {
           const Image(
             width: 155,
             height: 229,
-            image: AssetImage('assets/auth_images/happy_jumping.png'),
+            image: AssetImage('assets/images/happy_jumping.png'),
           ),
           const Text(
             'Welcome 👋',

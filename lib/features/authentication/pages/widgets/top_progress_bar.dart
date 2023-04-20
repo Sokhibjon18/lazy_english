@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-class LinearPercentIndicatorWidget extends StatelessWidget {
+class TopProgressBar extends StatelessWidget {
   final double linearPercent;
-  const LinearPercentIndicatorWidget({super.key, required this.linearPercent});
+  const TopProgressBar({super.key, required this.linearPercent});
 
   @override
   Widget build(BuildContext context) {
