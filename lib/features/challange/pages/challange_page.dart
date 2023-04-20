@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'widgets/badget_button/badget_button.dart';
-import 'widgets/challange_appBar.dart';
-import 'widgets/target_button/target.dart';
+import 'widgets/badget_tab/badget_button.dart';
+import 'widgets/challange_app_bar.dart';
+import 'widgets/target_tab/target.dart';
 
 class ChallangePage extends StatefulWidget {
   const ChallangePage({super.key});

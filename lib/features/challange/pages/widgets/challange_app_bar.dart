@@ -21,7 +21,7 @@ class _ChallangeAppBarState extends State<ChallangeAppBar> {
               padding: const EdgeInsets.only(right: 17.87),
               child: ClipRRect(
                 child: SvgPicture.asset(
-                  'assets/images/group.svg',
+                  'assets/vectors/icon.svg',
                 ),
               ),
             ),
