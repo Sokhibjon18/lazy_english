@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/splash/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
