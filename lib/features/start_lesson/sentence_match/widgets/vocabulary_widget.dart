@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:lazy_english/features/start_lesson/sentence_match/lists.dart';
 
 class VocabularyWidget extends StatefulWidget {
