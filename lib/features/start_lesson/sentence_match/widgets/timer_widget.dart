@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class TimerWidget extends StatefulWidget {
+  const TimerWidget({super.key});
+
   @override
   _TimerWidgetState createState() => _TimerWidgetState();
 }

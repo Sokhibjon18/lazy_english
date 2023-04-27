@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:lazy_english/features/start_lesson/sentence_match/second_page.dart';
-import 'package:lazy_english/features/start_lesson/sentence_match/timer_widget.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:lazy_english/features/start_lesson/sentence_match/widgets/timer_widget.dart';
 
-class SentenceMatchPage extends StatefulWidget {
-  const SentenceMatchPage({super.key});
+class LoadingPage extends StatefulWidget {
+  const LoadingPage({super.key});
 
   @override
-  State<SentenceMatchPage> createState() => _SentenceMatchPageState();
+  State<LoadingPage> createState() => _LoadingPageState();
 }
 
-class _SentenceMatchPageState extends State<SentenceMatchPage> {
+class _LoadingPageState extends State<LoadingPage> {
   void nextPage() {
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const MyWidget()));
+          context, MaterialPageRoute(builder: (context) => const SecondPage()));
     });
   }
 
