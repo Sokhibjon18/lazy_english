@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/badget_tab/badget_button.dart';
+import 'widgets/badges_tab/badges_button.dart';
 import 'widgets/challange_app_bar.dart';
 import 'widgets/target_tab/target.dart';
 
@@ -22,7 +22,7 @@ class _ChallangePageState extends State<ChallangePage> {
         title: const ChallangeAppBar(),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -84,7 +84,7 @@ class _ChallangePageState extends State<ChallangePage> {
                   ),
                 ],
               ),
-              _selected == true ? const TargetButton() : const BadgetButton(),
+              _selected == true ? const TargetButton() : const BadgesButton(),
             ],
           ),
         ),

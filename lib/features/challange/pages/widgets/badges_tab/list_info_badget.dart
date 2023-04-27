@@ -1,9 +1,9 @@
-class ListInfoBadget {
+class ListInfoBadge {
   String badgetImageName;
   String month;
   String xpLevel;
   String typ;
-  ListInfoBadget({
+  ListInfoBadge({
     required this.badgetImageName,
     required this.month,
     required this.xpLevel,
@@ -11,71 +11,71 @@ class ListInfoBadget {
   });
 }
 
-List<ListInfoBadget> infoListBadgetOne = [
-  ListInfoBadget(
+List<ListInfoBadge> infoListBadgetOne = [
+  ListInfoBadge(
       badgetImageName: 'assets/images/dimond_circular.png',
       month: 'November',
       xpLevel: '2000 XP',
       typ: 'Quiz King'),
-  ListInfoBadget(
+  ListInfoBadge(
       badgetImageName: 'assets/images/crown.png',
       month: 'July',
       xpLevel: '1500XP',
       typ: 'Compass Smart'),
-  ListInfoBadget(
+  ListInfoBadge(
       badgetImageName: 'assets/images/compas.png',
       month: 'March',
       xpLevel: '2500 XP',
       typ: 'Diamond Winner'),
 ];
 
-List<ListInfoBadget> infoListBadgetTwo = [
-  ListInfoBadget(
+List<ListInfoBadge> infoListBadgetTwo = [
+  ListInfoBadge(
       badgetImageName: 'assets/images/star.png',
       month: 'December',
       xpLevel: '2500 XP',
       typ: 'Shining Star'),
-  ListInfoBadget(
+  ListInfoBadge(
       badgetImageName: 'assets/images/portfel.png',
       month: 'August',
       xpLevel: '3000 XP',
       typ: 'Most Active'),
-  ListInfoBadget(
+  ListInfoBadge(
       badgetImageName: 'assets/images/cheese.png',
       month: 'March',
       xpLevel: '1000 XP',
       typ: 'The Sweetest'),
-  ListInfoBadget(
+  ListInfoBadge(
       badgetImageName: 'assets/images/bow.png',
       month: 'February',
       xpLevel: '1500 XP',
       typ: 'Best Target'),
 ];
 
-List<ListInfoBadget> infoListBadgetThri = [
-  ListInfoBadget(
+List<ListInfoBadge> infoListBadgetThri = [
+  ListInfoBadge(
       badgetImageName: 'assets/images/fix.png',
       month: 'December',
       xpLevel: '2500 XP',
       typ: 'Quick Fix'),
-  ListInfoBadget(
+  ListInfoBadge(
       badgetImageName: 'assets/images/time.png',
       month: 'August',
       xpLevel: '3000 XP',
       typ: 'The Fastest Man'),
-  ListInfoBadget(
+  ListInfoBadge(
       badgetImageName: 'assets/images/brain.png',
       month: 'March',
       xpLevel: '1000 XP',
       typ: 'Smart Learning'),
-  ListInfoBadget(
+  ListInfoBadge(
       badgetImageName: 'assets/images/crown.png',
       month: 'February',
       xpLevel: '1500 XP',
       typ: 'Best Target'),
 ];
 
-List<List<ListInfoBadget>> listInfoBadges = [
+List<List<ListInfoBadge>> listInfoBadges = [
   infoListBadgetOne,
   infoListBadgetTwo,
   infoListBadgetThri

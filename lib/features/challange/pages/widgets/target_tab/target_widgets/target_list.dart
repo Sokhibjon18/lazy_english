@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import '../../../list_info.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
-class TargetListState extends StatefulWidget {
-  const TargetListState({super.key});
+class TargetDailyMission extends StatefulWidget {
+  const TargetDailyMission({super.key});
 
   @override
-  State<TargetListState> createState() => _TargetListStateState();
+  State<TargetDailyMission> createState() => _TargetDailyMissionState();
 }
 
-class _TargetListStateState extends State<TargetListState> {
+class _TargetDailyMissionState extends State<TargetDailyMission> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        scrollDirection: Axis.vertical,
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemCount: infoList.length,
         itemBuilder: (context, index) {
