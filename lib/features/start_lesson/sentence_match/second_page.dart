@@ -4,14 +4,14 @@ import 'package:lazy_english/features/start_lesson/sentence_match/widgets/check_
 import 'package:lazy_english/features/start_lesson/sentence_match/widgets/level_widget.dart';
 import 'package:lazy_english/features/start_lesson/sentence_match/widgets/vocabulary_widget.dart';
 
-class SecondPage extends StatefulWidget {
-  const SecondPage({super.key});
+class SentenceMatchPage extends StatefulWidget {
+  const SentenceMatchPage({super.key});
 
   @override
-  State<SecondPage> createState() => _SecondPageState();
+  State<SentenceMatchPage> createState() => _SecondPageState();
 }
 
-class _SecondPageState extends State<SecondPage> {
+class _SecondPageState extends State<SentenceMatchPage> {
   bool compareLists(List list1, List list2) {
     if (list1.length != list2.length ||
         list1.runtimeType != list2.runtimeType) {

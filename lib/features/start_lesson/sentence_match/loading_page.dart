@@ -13,8 +13,8 @@ class LoadingPage extends StatefulWidget {
 class _LoadingPageState extends State<LoadingPage> {
   void nextPage() {
     Future.delayed(const Duration(seconds: 4), () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const SecondPage()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const SentenceMatchPage()));
     });
   }
 
@@ -67,7 +67,7 @@ class _LoadingPageState extends State<LoadingPage> {
                       color: Color(0xFF616161),
                       fontWeight: FontWeight.w700),
                 ),
-                TimerWidget(),
+                const TimerWidget(),
               ]),
         ),
       ),

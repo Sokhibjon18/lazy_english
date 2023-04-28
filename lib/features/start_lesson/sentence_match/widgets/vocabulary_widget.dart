@@ -24,49 +24,53 @@ class _VocabularyWidgetState extends State<VocabularyWidget> {
                 children: List.generate(remuvVocabulary.length, (index) {
                   return TextButton(
                       style: TextButton.styleFrom(
-                          backgroundColor: Color(0xFFFFFFFF),
+                          backgroundColor: const Color(0xFFFFFFFF),
                           side: const BorderSide(color: Color(0xFFEEEEEE)),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50))),
                       onPressed: () {
                         setState(() {
                           remuvVocabulary.remove(remuvVocabulary[index]);
-                          buttonColors.clear();
-                          buttonColors.addAll(colorButton);
-                          textColors.clear();
-                          textColors.addAll(colorText);
+                          buttonColors[index] = const Color(0xFFFFFFFF);
+                          textColors[index] = const Color(0xFF212121);
                         });
                       },
                       child: Text(
                         remuvVocabulary[index],
-                        style: const TextStyle(color: Color(0xFF212121)),
+                        style: const TextStyle(
+                            color: Color(0xFF212121),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700),
                       ));
                 })),
           ),
           Wrap(
-              spacing: 5.0,
-              runSpacing: 10.0,
-              children: List.generate(vocabulary.length, (index) {
-                return TextButton(
-                    style: TextButton.styleFrom(
-                        backgroundColor: buttonColors[index],
-                        side: const BorderSide(color: Color(0xFFEEEEEE)),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50))),
-                    onPressed: () {
-                      setState(() {
-                        remuvVocabulary.add(vocabulary[index]);
-                        colorButton.addAll(buttonColors);
-                        buttonColors[index] = selectedButtonColor[index];
-                        colorText.addAll(textColors);
-                        textColors[index] = selectedButtonColor[index];
-                      });
-                    },
-                    child: Text(
-                      vocabulary[index],
-                      style: TextStyle(color: textColors[index]),
-                    ));
-              })),
+            spacing: 5.0,
+            runSpacing: 10.0,
+            children: List.generate(vocabulary.length, (index) {
+              return TextButton(
+                style: TextButton.styleFrom(
+                    backgroundColor: buttonColors[index],
+                    side: const BorderSide(color: Color(0xFFEEEEEE)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50))),
+                onPressed: () {
+                  setState(() {
+                    remuvVocabulary.add(vocabulary[index]);
+                    buttonColors[index] = const Color(0xFFEEEEEE);
+                    textColors[index] = const Color(0xFFEEEEEE);
+                  });
+                },
+                child: Text(
+                  vocabulary[index],
+                  style: TextStyle(
+                      color: textColors[index],
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700),
+                ),
+              );
+            }),
+          ),
         ],
       ),
     );

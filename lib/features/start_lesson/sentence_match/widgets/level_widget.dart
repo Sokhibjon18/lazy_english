@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lazy_english/features/start_lesson/sentence_match/lists.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class LevelWidget extends StatefulWidget {
