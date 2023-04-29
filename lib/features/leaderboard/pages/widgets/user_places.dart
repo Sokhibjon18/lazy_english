@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:lazy_english/features/leaderboard/pages/user_profile_details_page.dart';
+import '../user_profile_details_page.dart';
 
 class UsersPlaces extends StatefulWidget {
   const UsersPlaces({super.key});

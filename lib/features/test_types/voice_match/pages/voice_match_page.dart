@@ -4,7 +4,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:lazy_english/features/start_lesson/voice_match/pages/widgets/tap_to_talk_button.dart';
+import 'widgets/tap_to_talk_button.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
@@ -54,8 +54,7 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                     const SizedBox(width: 8),
                     const Text(
                       '957',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                     )
                   ],
                 ),
@@ -83,12 +82,10 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16),
-                          border: Border.all(
-                              width: 2, color: const Color(0xFFFAFAFA)),
+                          border: Border.all(width: 2, color: const Color(0xFFFAFAFA)),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 16, top: 12, bottom: 12),
+                          padding: const EdgeInsets.only(left: 20, right: 16, top: 12, bottom: 12),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -101,9 +98,8 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                                 child: SizedBox(
                                   child: AutoSizeText(
                                     speechText,
-                                    style: const TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w700),
+                                    style:
+                                        const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                                     maxLines: 10,
                                   ),
                                 ),

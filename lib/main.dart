@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/start_lesson/sentence_match/loading_page.dart';
+import 'features/test_types/sentence_match/loading_page.dart';
 
 void main() {
   runApp(const MyApp());

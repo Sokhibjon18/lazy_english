@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/start_lesson/sentence_match/lists.dart';
+import '../lists.dart';
 
 class VocabularyWidget extends StatefulWidget {
   const VocabularyWidget({super.key});
@@ -26,8 +26,7 @@ class _VocabularyWidgetState extends State<VocabularyWidget> {
                       style: TextButton.styleFrom(
                           backgroundColor: const Color(0xFFFFFFFF),
                           side: const BorderSide(color: Color(0xFFEEEEEE)),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50))),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
                       onPressed: () {
                         setState(() {
                           remuvVocabulary.remove(remuvVocabulary[index]);
@@ -38,9 +37,7 @@ class _VocabularyWidgetState extends State<VocabularyWidget> {
                       child: Text(
                         remuvVocabulary[index],
                         style: const TextStyle(
-                            color: Color(0xFF212121),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700),
+                            color: Color(0xFF212121), fontSize: 18, fontWeight: FontWeight.w700),
                       ));
                 })),
           ),
@@ -52,8 +49,7 @@ class _VocabularyWidgetState extends State<VocabularyWidget> {
                 style: TextButton.styleFrom(
                     backgroundColor: buttonColors[index],
                     side: const BorderSide(color: Color(0xFFEEEEEE)),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50))),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
                 onPressed: () {
                   setState(() {
                     remuvVocabulary.add(vocabulary[index]);
@@ -64,9 +60,7 @@ class _VocabularyWidgetState extends State<VocabularyWidget> {
                 child: Text(
                   vocabulary[index],
                   style: TextStyle(
-                      color: textColors[index],
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700),
+                      color: textColors[index], fontSize: 18, fontWeight: FontWeight.w700),
                 ),
               );
             }),

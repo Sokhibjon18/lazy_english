@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:lazy_english/features/leaderboard/pages/widgets/buttons_for_linking_user.dart';
-import 'package:lazy_english/features/leaderboard/pages/widgets/user_results.dart';
+import 'widgets/buttons_for_linking_user.dart';
+import 'widgets/user_results.dart';
 
 class UserProfileDetailsPage extends StatefulWidget {
   const UserProfileDetailsPage({super.key});

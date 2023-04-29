@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/start_lesson/sentence_match/lists.dart';
-import 'package:lazy_english/features/start_lesson/sentence_match/widgets/check_answer_tab.dart';
-import 'package:lazy_english/features/start_lesson/sentence_match/widgets/level_widget.dart';
-import 'package:lazy_english/features/start_lesson/sentence_match/widgets/vocabulary_widget.dart';
+import 'lists.dart';
+import 'widgets/check_answer_tab.dart';
+import 'widgets/level_widget.dart';
+import 'widgets/vocabulary_widget.dart';
 
 class SentenceMatchPage extends StatefulWidget {
   const SentenceMatchPage({super.key});
@@ -13,8 +13,7 @@ class SentenceMatchPage extends StatefulWidget {
 
 class _SecondPageState extends State<SentenceMatchPage> {
   bool compareLists(List list1, List list2) {
-    if (list1.length != list2.length ||
-        list1.runtimeType != list2.runtimeType) {
+    if (list1.length != list2.length || list1.runtimeType != list2.runtimeType) {
       return false;
     }
     for (int i = 0; i < list1.length; i++) {

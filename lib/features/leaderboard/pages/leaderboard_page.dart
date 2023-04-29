@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:lazy_english/features/leaderboard/pages/widgets/leaderboard_buttons.dart';
-import 'package:lazy_english/features/leaderboard/pages/widgets/user_places.dart';
+import 'widgets/leaderboard_buttons.dart';
+import 'widgets/user_places.dart';
 
 class LeaderboardPage extends StatefulWidget {
   const LeaderboardPage({super.key});
