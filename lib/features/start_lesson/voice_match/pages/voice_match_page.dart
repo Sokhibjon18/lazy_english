@@ -180,8 +180,6 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
   }
 
   void onListen() async {
-    var myLocale = const Locale("en", "US");
-
     if (!_isListening) {
       bool available = await _speech.initialize(
         onStatus: (result) => log('onStatus: $result'),
