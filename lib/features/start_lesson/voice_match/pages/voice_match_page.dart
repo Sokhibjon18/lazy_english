@@ -37,15 +37,17 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                       onTap: () {},
                     ),
                     Expanded(
-                      child: LinearPercentIndicator(
-                        width: 216,
-                        lineHeight: 12,
-                        percent: 0.3,
-                        progressColor: const Color(0xFF6949FF),
-                        barRadius: const Radius.circular(100),
-                        animation: true,
-                        animationDuration: 1000,
-                        backgroundColor: const Color(0xFFEEEEEE),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 24),
+                        child: LinearPercentIndicator(
+                          lineHeight: 12,
+                          percent: 0.3,
+                          progressColor: const Color(0xFF6949FF),
+                          barRadius: const Radius.circular(100),
+                          animation: true,
+                          animationDuration: 1000,
+                          backgroundColor: const Color(0xFFEEEEEE),
+                        ),
                       ),
                     ),
                     SvgPicture.asset('assets/diamond.svg'),
