@@ -54,7 +54,8 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                     const SizedBox(width: 8),
                     const Text(
                       '957',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                     )
                   ],
                 ),
@@ -82,10 +83,12 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16),
-                          border: Border.all(width: 2, color: const Color(0xFFFAFAFA)),
+                          border: Border.all(
+                              width: 2, color: const Color(0xFFFAFAFA)),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20, right: 16, top: 12, bottom: 12),
+                          padding: const EdgeInsets.only(
+                              left: 20, right: 16, top: 12, bottom: 12),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -98,8 +101,9 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                                 child: SizedBox(
                                   child: AutoSizeText(
                                     speechText,
-                                    style:
-                                        const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                                    style: const TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700),
                                     maxLines: 10,
                                   ),
                                 ),
@@ -176,7 +180,6 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
   void initState() {
     super.initState();
     _speech = stt.SpeechToText();
-    _speech.locales();
   }
 
   void onListen() async {
