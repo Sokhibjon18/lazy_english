@@ -21,7 +21,7 @@ class ButtonsForLinkingWithUsers extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('assets/add_user_icon.svg'),
+                  SvgPicture.asset('assets/vectors/add_user_icon.svg'),
                   const SizedBox(width: 8),
                   const Text(
                     'Follow',
@@ -48,7 +48,7 @@ class ButtonsForLinkingWithUsers extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('assets/chat_icon.svg'),
+                  SvgPicture.asset('assets/vectors/chat_icon.svg'),
                   const SizedBox(width: 8),
                   const Text(
                     'Message',

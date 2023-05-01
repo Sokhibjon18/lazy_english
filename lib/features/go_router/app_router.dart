@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lazy_english/bottom_navigation_bar/bottom_navigation_bar.dart';
+
+import 'bottom_navigation_bar.dart';
 
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigator = GlobalKey(debugLabel: 'shell');
+final GlobalKey<NavigatorState> _shellNavigator =
+    GlobalKey(debugLabel: 'shell');
 
 final GoRouter router = GoRouter(
   debugLogDiagnostics: true,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:lazy_english/go_router/app_router.dart';
+import 'features/go_router/app_router.dart';
 
 void main() {
   runApp(const MyApp());
