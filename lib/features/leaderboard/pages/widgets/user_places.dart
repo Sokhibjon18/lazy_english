@@ -88,11 +88,11 @@ class _UsersPlacesState extends State<UsersPlaces> {
   Widget topPlaces(int index) {
     switch (index) {
       case 0:
-        return SvgPicture.asset('assets/first_place_medal.svg');
+        return SvgPicture.asset('assets/vectors/first_place_medal.svg');
       case 1:
-        return SvgPicture.asset('assets/second_place_medal.svg');
+        return SvgPicture.asset('assets/vectors/second_place_medal.svg');
       case 2:
-        return SvgPicture.asset('assets/third_place_medal.svg');
+        return SvgPicture.asset('assets/vectors/third_place_medal.svg');
       default:
     }
     return Container();

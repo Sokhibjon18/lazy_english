@@ -22,7 +22,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
           children: [
             Row(
               children: [
-                SvgPicture.asset('assets/elingo_logo.svg'),
+                SvgPicture.asset('assets/vectors/elingo_logo.svg'),
                 const SizedBox(width: 20),
                 const Text(
                   'Leaderboard',
@@ -30,7 +30,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                 ),
                 Expanded(child: Container()),
                 SizedBox(
-                  child: SvgPicture.asset('assets/search_icon.svg'),
+                  child: SvgPicture.asset('assets/vectors/search_icon.svg'),
                 ),
               ],
             ),

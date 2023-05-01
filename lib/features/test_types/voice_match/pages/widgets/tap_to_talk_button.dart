@@ -31,7 +31,7 @@ class _TapToTalkButtonState extends State<TapToTalkButton> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SvgPicture.asset(
-                    'assets/micraphone.svg',
+                    'assets/vectors/micraphone.svg',
                     height: 20,
                   ),
                   const SizedBox(width: 12),

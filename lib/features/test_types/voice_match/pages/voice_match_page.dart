@@ -33,7 +33,7 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      child: SvgPicture.asset('assets/cancel.svg'),
+                      child: SvgPicture.asset('assets/vectors/cancel.svg'),
                       onTap: () {},
                     ),
                     Expanded(
@@ -50,11 +50,12 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                         ),
                       ),
                     ),
-                    SvgPicture.asset('assets/diamond.svg'),
+                    SvgPicture.asset('assets/vectors/diamond.svg'),
                     const SizedBox(width: 8),
                     const Text(
                       '957',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                     )
                   ],
                 ),
@@ -73,7 +74,7 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Image(
-                      image: AssetImage('assets/speaking_ellingo.png'),
+                      image: AssetImage('assets/images/speaking_ellingo.png'),
                       height: 138,
                       width: 120,
                     ),
@@ -82,24 +83,28 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16),
-                          border: Border.all(width: 2, color: const Color(0xFFFAFAFA)),
+                          border: Border.all(
+                              width: 2, color: const Color(0xFFFAFAFA)),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20, right: 16, top: 12, bottom: 12),
+                          padding: const EdgeInsets.only(
+                              left: 20, right: 16, top: 12, bottom: 12),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               InkWell(
                                 onTap: () => textToSpeech(speechText),
-                                child: SvgPicture.asset('assets/volume.svg'),
+                                child: SvgPicture.asset(
+                                    'assets/vectors/volume.svg'),
                               ),
                               const SizedBox(width: 18),
                               Expanded(
                                 child: SizedBox(
                                   child: AutoSizeText(
                                     speechText,
-                                    style:
-                                        const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                                    style: const TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700),
                                     maxLines: 10,
                                   ),
                                 ),
