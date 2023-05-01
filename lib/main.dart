@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'features/test_types/sentence_match/loading_page.dart';
+
+import 'package:lazy_english/features/go_router/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: LoadingPage(),
+      routerConfig: router,
     );
   }
 }
