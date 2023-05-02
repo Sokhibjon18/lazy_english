@@ -34,12 +34,16 @@ class _BadgetListState extends State<BadgetList> {
                     const Text(
                       'This Year',
                       style: TextStyle(
-                          color: Color(0xFF212121), fontSize: 24, fontWeight: FontWeight.w700),
+                          color: Color(0xFF212121),
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700),
                     ),
                     Text(
                       '${listInfoBadges[index].length} badges',
                       style: const TextStyle(
-                          color: Color(0xFF616161), fontSize: 20, fontWeight: FontWeight.w700),
+                          color: Color(0xFF616161),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700),
                     )
                   ],
                 ),
@@ -50,19 +54,21 @@ class _BadgetListState extends State<BadgetList> {
                 itemCount: listInfoBadges[index].length,
                 itemBuilder: (m, number) {
                   return Padding(
-                    padding: const EdgeInsets.all(24.0),
+                    padding:
+                        const EdgeInsets.only(top: 24, bottom: 24, left: 24),
                     child: Container(
                       decoration: const BoxDecoration(
-                          border: Border(top: BorderSide(color: Color(0xFFEEEEEE)))),
+                          border: Border(
+                              top: BorderSide(color: Color(0xFFEEEEEE)))),
                       child: Padding(
                         padding: const EdgeInsets.only(top: 24),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             SizedBox(
-                              height: MediaQuery.of(context).size.height / 9,
-                              width: MediaQuery.of(context).size.height / 9,
-                              child: Image.asset(listInfoBadges[index][number].badgetImageName),
+                              width: 94.44,
+                              child: Image.asset(listInfoBadges[index][number]
+                                  .badgetImageName),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,6 +80,7 @@ class _BadgetListState extends State<BadgetList> {
                                       fontSize: 20,
                                       fontWeight: FontWeight.w700),
                                 ),
+                                const SizedBox(height: 10),
                                 Row(
                                   children: [
                                     Text(
@@ -84,7 +91,8 @@ class _BadgetListState extends State<BadgetList> {
                                           color: Color(0xFF616161)),
                                     ),
                                     const Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding:
+                                          EdgeInsets.only(left: 8, right: 8),
                                       child: Icon(
                                         Icons.circle,
                                         size: 10,

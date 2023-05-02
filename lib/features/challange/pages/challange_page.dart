@@ -22,7 +22,7 @@ class _ChallangePageState extends State<ChallangePage> {
         title: const ChallangeAppBar(),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 18),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -34,8 +34,9 @@ class _ChallangePageState extends State<ChallangePage> {
                     child: Container(
                       height: 45,
                       decoration: BoxDecoration(
-                          color:
-                              _selected == true ? const Color(0xFF6949FF) : const Color(0xFFFFFFFF),
+                          color: _selected == true
+                              ? const Color(0xFF6949FF)
+                              : const Color(0xFFFFFFFF),
                           border: Border.all(color: const Color(0xFF6949FF)),
                           borderRadius: BorderRadius.circular(100)),
                       child: TextButton(
