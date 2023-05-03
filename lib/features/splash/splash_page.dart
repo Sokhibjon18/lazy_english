@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../authentication/pages/welcome_page.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -11,11 +11,8 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   Future<void> goToWelcomePage() {
     return Future.delayed(
-      const Duration(seconds: 3),
-      () => Navigator.push(
-        context,
-        MaterialPageRoute(builder: (_) => const WelcomePage()),
-      ),
+      const Duration(milliseconds: 2500),
+      () => context.go('/splash/auth_welcome'),
     );
   }
 

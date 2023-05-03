@@ -8,7 +8,7 @@ List<String> vocabulary = [
   'Mango',
   'Qulpnayhjghkfhfh'
 ];
-Set<String> vocabularyOne = Set<String>();
+
 List<String> remuvVocabulary = [];
 
 List<Color> buttonColors = [

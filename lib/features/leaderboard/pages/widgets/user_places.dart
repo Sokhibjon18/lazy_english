@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../user_profile_details_page.dart';
+import 'package:go_router/go_router.dart';
 
 class UsersPlaces extends StatefulWidget {
   const UsersPlaces({super.key});
@@ -20,12 +20,7 @@ class _UsersPlacesState extends State<UsersPlaces> {
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => const UserProfileDetailsPage(),
-                ),
-              );
+              context.go('/leaderboard/user_profile_details_route');
             },
             child: Container(
               width: double.infinity,

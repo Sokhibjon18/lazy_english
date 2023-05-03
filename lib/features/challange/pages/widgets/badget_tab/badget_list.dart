@@ -20,7 +20,7 @@ class _BadgetListState extends State<BadgetList> {
             margin: const EdgeInsets.only(top: 24),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(24),
-                border: Border.all(color: Color(0xFFE0E0E0))),
+                border: Border.all(color: const Color(0xFFE0E0E0))),
             child: Column(
               children: [
                 Padding(
@@ -31,12 +31,16 @@ class _BadgetListState extends State<BadgetList> {
                       const Text(
                         'This Year',
                         style: TextStyle(
-                            color: Color(0xFF212121), fontSize: 24, fontWeight: FontWeight.w700),
+                            color: Color(0xFF212121),
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700),
                       ),
                       Text(
                         '${listInfoBadges[index].length} badges',
                         style: const TextStyle(
-                            color: Color(0xFF616161), fontSize: 20, fontWeight: FontWeight.w700),
+                            color: Color(0xFF616161),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700),
                       )
                     ],
                   ),
@@ -49,7 +53,8 @@ class _BadgetListState extends State<BadgetList> {
                       padding: const EdgeInsets.all(24.0),
                       child: Container(
                         decoration: const BoxDecoration(
-                            border: Border(top: BorderSide(color: Color(0xFFEEEEEE)))),
+                            border: Border(
+                                top: BorderSide(color: Color(0xFFEEEEEE)))),
                         child: Padding(
                           padding: const EdgeInsets.only(top: 24),
                           child: Row(
@@ -58,7 +63,8 @@ class _BadgetListState extends State<BadgetList> {
                               SizedBox(
                                 height: MediaQuery.of(context).size.height / 9,
                                 width: MediaQuery.of(context).size.height / 9,
-                                child: Image.asset(listInfoBadges[index][number].badgetImageName),
+                                child: Image.asset(listInfoBadges[index][number]
+                                    .badgetImageName),
                               ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +86,8 @@ class _BadgetListState extends State<BadgetList> {
                                             color: Color(0xFF616161)),
                                       ),
                                       const Padding(
-                                        padding: EdgeInsets.only(left: 8, right: 8),
+                                        padding:
+                                            EdgeInsets.only(left: 8, right: 8),
                                         child: Icon(
                                           Icons.circle,
                                           size: 10,
@@ -100,7 +107,7 @@ class _BadgetListState extends State<BadgetList> {
                               ),
                               IconButton(
                                   onPressed: () {},
-                                  color: Color(0xFF616161),
+                                  color: const Color(0xFF616161),
                                   splashRadius: 20,
                                   icon: const Icon(Icons.arrow_forward_ios))
                             ],
