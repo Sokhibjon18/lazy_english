@@ -1,8 +1,7 @@
-import 'dart:developer';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'complete_profile_page.dart';
+import 'package:go_router/go_router.dart';
+
 import 'widgets/create_signup_password.dart';
 import 'widgets/email_address.dart';
 
@@ -54,7 +53,8 @@ class _UserInfoPageState extends State<UserInfoPage> {
           CarouselSlider.builder(
             carouselController: carouselController,
             itemCount: 4,
-            itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
+            itemBuilder:
+                (BuildContext context, int itemIndex, int pageViewIndex) {
               currentPage = pageViewIndex;
               return carouselSwitch(pageViewIndex);
             },
@@ -67,7 +67,8 @@ class _UserInfoPageState extends State<UserInfoPage> {
             children: [
               Divider(color: Colors.grey.withOpacity(0.6)),
               Padding(
-                padding: const EdgeInsets.only(left: 24, right: 24, top: 24, bottom: 32),
+                padding: const EdgeInsets.only(
+                    left: 24, right: 24, top: 24, bottom: 32),
                 child: SizedBox(
                   width: double.infinity,
                   height: 58,
@@ -75,12 +76,8 @@ class _UserInfoPageState extends State<UserInfoPage> {
                     onPressed: () {
                       setState(() {
                         if (currentPage == 3) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const CompleteProfile(),
-                            ),
-                          );
+                          context.go(
+                              '/splash/auth_welcome/auth_user_info/auth_sign_up_completed');
                         } else {
                           carouselController.nextPage();
                           percent = percent + 0.25;

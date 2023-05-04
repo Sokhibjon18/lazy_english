@@ -15,6 +15,7 @@ class _ChallangePageState extends State<ChallangePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.white,
         shadowColor: Colors.white70,
@@ -34,8 +35,9 @@ class _ChallangePageState extends State<ChallangePage> {
                     child: Container(
                       height: 45,
                       decoration: BoxDecoration(
-                          color:
-                              _selected == true ? const Color(0xFF6949FF) : const Color(0xFFFFFFFF),
+                          color: _selected == true
+                              ? const Color(0xFF6949FF)
+                              : const Color(0xFFFFFFFF),
                           border: Border.all(color: const Color(0xFF6949FF)),
                           borderRadius: BorderRadius.circular(100)),
                       child: TextButton(

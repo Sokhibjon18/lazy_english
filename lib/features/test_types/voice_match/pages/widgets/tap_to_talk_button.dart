@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class TapToTalkButton extends StatefulWidget {
-  TapToTalkButton({
+  const TapToTalkButton({
     super.key,
     required this.onListen,
   });
-  Function onListen;
+  final Function onListen;
   @override
   State<TapToTalkButton> createState() => _TapToTalkButtonState();
 }

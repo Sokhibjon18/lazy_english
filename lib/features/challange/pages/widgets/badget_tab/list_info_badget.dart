@@ -52,7 +52,7 @@ List<ListInfoBadget> infoListBadgetTwo = [
       typ: 'Best Target'),
 ];
 
-List<ListInfoBadget> infoListBadgetThri = [
+List<ListInfoBadget> infoListBadgetThree = [
   ListInfoBadget(
       badgetImageName: 'assets/images/fix.png',
       month: 'December',
@@ -78,5 +78,5 @@ List<ListInfoBadget> infoListBadgetThri = [
 List<List<ListInfoBadget>> listInfoBadges = [
   infoListBadgetOne,
   infoListBadgetTwo,
-  infoListBadgetThri
+  infoListBadgetThree
 ];

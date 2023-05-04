@@ -175,7 +175,7 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
   late stt.SpeechToText _speech;
   bool _isListening = false;
   String _text = 'I am fine thank you';
-  double _confidance = 1.0;
+  double confidance = 1.0;
 
   @override
   void initState() {
@@ -196,7 +196,7 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
             onResult: (result) => setState(() {
               _text = result.recognizedWords;
               if (result.hasConfidenceRating && result.confidence > 0) {
-                _confidance = result.confidence;
+                confidance = result.confidence;
               }
             }),
           );
