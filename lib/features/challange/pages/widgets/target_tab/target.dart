@@ -36,7 +36,7 @@ class _TargetButtonState extends State<TargetButton> {
               ],
             ),
           ),
-          const TargetListState(),
+          const TargetDailyMission(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
@@ -50,7 +50,8 @@ class _TargetButtonState extends State<TargetButton> {
               )
             ],
           ),
-          const TargetChallengeList()
+          const TargetChallengeList(),
+          const SizedBox(height: 24),
         ],
       ),
     );
