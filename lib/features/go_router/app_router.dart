@@ -9,6 +9,7 @@ import 'package:lazy_english/features/leaderboard/pages/leaderboard_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/user_profile_details_page.dart';
 import 'package:lazy_english/features/splash/splash_page.dart';
 import 'package:lazy_english/features/test_types/find_meaning_of_sentence/page/find_meaning_page.dart';
+import 'package:lazy_english/features/test_types/match_word_pair.dart/pages/match_word_pair.dart';
 
 import 'bottom_navigation_bar.dart';
 
@@ -19,11 +20,11 @@ final GlobalKey<NavigatorState> _shellNavigator =
 final GoRouter bottomNavigationBarRouter = GoRouter(
   debugLogDiagnostics: true,
   navigatorKey: _rootNavigator,
-  initialLocation: '/find_meaning',
+  initialLocation: '/word_match',
   routes: [
     GoRoute(
-      path: '/find_meaning',
-      builder: (context, state) => const FindMeaningOfSentance(),
+      path: '/word_match',
+      builder: (context, state) => const MatchWordPairPage(),
     ),
     GoRoute(
       path: '/splash',
