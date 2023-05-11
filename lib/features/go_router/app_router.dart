@@ -8,6 +8,7 @@ import 'package:lazy_english/features/challange/pages/challange_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/leaderboard_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/user_profile_details_page.dart';
 import 'package:lazy_english/features/splash/splash_page.dart';
+import 'package:lazy_english/features/test_types/find_meaning_of_sentence/page/find_meaning_page.dart';
 
 import 'bottom_navigation_bar.dart';
 
@@ -18,8 +19,12 @@ final GlobalKey<NavigatorState> _shellNavigator =
 final GoRouter bottomNavigationBarRouter = GoRouter(
   debugLogDiagnostics: true,
   navigatorKey: _rootNavigator,
-  initialLocation: '/splash',
+  initialLocation: '/find_meaning',
   routes: [
+    GoRoute(
+      path: '/find_meaning',
+      builder: (context, state) => const FindMeaningOfSentance(),
+    ),
     GoRoute(
       path: '/splash',
       builder: (context, state) => const SplashPage(),
