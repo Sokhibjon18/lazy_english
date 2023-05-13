@@ -4,6 +4,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:go_router/go_router.dart';
 import 'widgets/tap_to_talk_button.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
@@ -147,7 +148,7 @@ class _VoiceMatchPageState extends State<VoiceMatchPage> {
           Expanded(child: Container()),
           const Divider(color: Color(0xFFEEEEEE)),
           TextButton(
-            onPressed: () {},
+            onPressed: () => context.go('/challange/find_meaning'),
             child: const Text(
               'Skip',
               style: TextStyle(

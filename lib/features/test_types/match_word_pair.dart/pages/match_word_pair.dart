@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lazy_english/features/test_types/match_word_pair.dart/pages/widgets/find_match_pair.dart';
-import 'package:lazy_english/features/test_types/sentence_match/lists.dart';
+
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class MatchWordPairPage extends StatefulWidget {
@@ -67,7 +68,7 @@ class _MatchWordPairPageState extends State<MatchWordPairPage> {
               height: 58,
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => context.go('/challange/lesson_completed'),
                 style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(),
                     backgroundColor: const Color(0xFF6949FF)),

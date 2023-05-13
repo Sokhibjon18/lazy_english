@@ -5,24 +5,26 @@ import 'package:lazy_english/features/authentication/pages/complete_profile_page
 import 'package:lazy_english/features/authentication/pages/user_info_page.dart';
 import 'package:lazy_english/features/authentication/pages/welcome_page.dart';
 import 'package:lazy_english/features/challange/pages/challange_page.dart';
+import 'package:lazy_english/features/comleted_page/completed_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/leaderboard_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/user_profile_details_page.dart';
 import 'package:lazy_english/features/splash/splash_page.dart';
+import 'package:lazy_english/features/test_types/find_meaning_of_sentence/page/find_meaning_page.dart';
 import 'package:lazy_english/features/test_types/match_word_pair.dart/pages/match_word_pair.dart';
+import 'package:lazy_english/features/test_types/sentence_match/loading_page.dart';
+import 'package:lazy_english/features/test_types/sentence_match/second_page.dart';
+import 'package:lazy_english/features/test_types/voice_match/pages/voice_match_page.dart';
 import 'package:lazy_english/go_router/bottom_navigation_bar.dart';
 
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigator = GlobalKey(debugLabel: 'shell');
+final GlobalKey<NavigatorState> _shellNavigator =
+    GlobalKey(debugLabel: 'shell');
 
-final GoRouter bottomNavigationBarRouter = GoRouter(
+final GoRouter router = GoRouter(
   debugLogDiagnostics: true,
   navigatorKey: _rootNavigator,
-  initialLocation: '/word_match',
+  initialLocation: '/splash',
   routes: [
-    GoRoute(
-      path: '/word_match',
-      builder: (context, state) => const MatchWordPairPage(),
-    ),
     GoRoute(
       path: '/splash',
       builder: (context, state) => const SplashPage(),
@@ -82,6 +84,32 @@ final GoRouter bottomNavigationBarRouter = GoRouter(
               child: ChallangePage(),
             );
           },
+          routes: [
+            GoRoute(
+              path: 'quiz_king',
+              builder: (context, state) => const LoadingPage(),
+            ),
+            GoRoute(
+              path: 'sentence_match_page',
+              builder: (context, state) => const SentenceMatchPage(),
+            ),
+            GoRoute(
+              path: 'voice_match',
+              builder: (context, state) => const VoiceMatchPage(),
+            ),
+            GoRoute(
+              path: 'find_meaning',
+              builder: (context, state) => const FindMeaningOfSentance(),
+            ),
+            GoRoute(
+              path: 'match_words',
+              builder: (context, state) => const MatchWordPairPage(),
+            ),
+            GoRoute(
+              path: 'lesson_completed',
+              builder: (context, state) => const CompletedPage(),
+            ),
+          ],
         ),
         GoRoute(
           path: '/premium',
