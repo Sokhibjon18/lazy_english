@@ -37,6 +37,7 @@ class _TargetDailyMissionState extends State<TargetDailyMission> {
                       children: [
                         Text(
                           infoList[index].coins,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                               color: Color(0xFF212121),
                               fontSize: 24,
