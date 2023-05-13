@@ -112,9 +112,9 @@ class _UserInfoPageState extends State<UserInfoPage> {
           whatToWriteInTextfield: 'Age',
         );
       case 2:
-        return const EmailAddress();
+        return const PhoneNumber();
       case 3:
-        return const CreateNewPassword();
+        return const EnterVerificationCode();
       default:
     }
     return Container();

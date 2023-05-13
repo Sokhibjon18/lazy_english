@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lazy_english/features/authentication/pages/complete_profile_page.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page/sign_in_page.dart';
+
 import 'package:lazy_english/features/authentication/pages/user_info_page.dart';
 import 'package:lazy_english/features/authentication/pages/welcome_page.dart';
 import 'package:lazy_english/features/challange/pages/challange_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/leaderboard_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/user_profile_details_page.dart';
 import 'package:lazy_english/features/splash/splash_page.dart';
-import 'package:lazy_english/features/test_types/find_meaning_of_sentence/page/find_meaning_page.dart';
 import 'package:lazy_english/features/test_types/match_word_pair.dart/pages/match_word_pair.dart';
-
-import 'bottom_navigation_bar.dart';
+import 'package:lazy_english/go_router/bottom_navigation_bar.dart';
 
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigator =
-    GlobalKey(debugLabel: 'shell');
+final GlobalKey<NavigatorState> _shellNavigator = GlobalKey(debugLabel: 'shell');
 
 final GoRouter bottomNavigationBarRouter = GoRouter(
   debugLogDiagnostics: true,
@@ -44,10 +41,6 @@ final GoRouter bottomNavigationBarRouter = GoRouter(
                 ),
               ],
             ),
-            GoRoute(
-              path: 'auth_sign_in',
-              builder: (context, state) => const SignInPage(),
-            )
           ],
         )
       ],
