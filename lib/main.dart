@@ -1,7 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
-
+import 'package:flutter/material.dart'
 import 'go_router/app_router.dart';
+import 'package:lazy_english/features/comleted_page/completed_page.dart';
+import 'features/go_router/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,9 +15,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      routerConfig: bottomNavigationBarRouter,
+    return const MaterialApp(
+      home: CompletedPage(),
+    
+      
     );
   }
 }
