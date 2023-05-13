@@ -8,18 +8,21 @@ import 'package:lazy_english/features/challange/pages/challange_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/leaderboard_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/user_profile_details_page.dart';
 import 'package:lazy_english/features/splash/splash_page.dart';
-
-import 'bottom_navigation_bar.dart';
+import 'package:lazy_english/features/test_types/match_word_pair.dart/pages/match_word_pair.dart';
+import 'package:lazy_english/go_router/bottom_navigation_bar.dart';
 
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigator =
-    GlobalKey(debugLabel: 'shell');
+final GlobalKey<NavigatorState> _shellNavigator = GlobalKey(debugLabel: 'shell');
 
 final GoRouter bottomNavigationBarRouter = GoRouter(
   debugLogDiagnostics: true,
   navigatorKey: _rootNavigator,
-  initialLocation: '/splash',
+  initialLocation: '/word_match',
   routes: [
+    GoRoute(
+      path: '/word_match',
+      builder: (context, state) => const MatchWordPairPage(),
+    ),
     GoRoute(
       path: '/splash',
       builder: (context, state) => const SplashPage(),

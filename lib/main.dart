@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'features/go_router/app_router.dart';
+import 'go_router/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
