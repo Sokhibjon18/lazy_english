@@ -70,27 +70,6 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 24, right: 24),
-            child: SizedBox(
-              height: 58,
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  context.go('/splash/auth_welcome/auth_sign_in');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFF0EDFF),
-                  shape: const StadiumBorder(),
-                ),
-                child: const Text(
-                  'I ALREADY HAVE AN ACCOUNT',
-                  style: TextStyle(color: Color(0xFF6949FF)),
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(height: 32),
         ],
       ),
     );

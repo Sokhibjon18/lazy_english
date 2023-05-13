@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lazy_english/features/authentication/pages/complete_profile_page.dart';
-import 'package:lazy_english/features/authentication/pages/sign_in_page/sign_in_page.dart';
+
 import 'package:lazy_english/features/authentication/pages/user_info_page.dart';
 import 'package:lazy_english/features/authentication/pages/welcome_page.dart';
 import 'package:lazy_english/features/challange/pages/challange_page.dart';
@@ -38,10 +38,6 @@ final GoRouter bottomNavigationBarRouter = GoRouter(
                 ),
               ],
             ),
-            GoRoute(
-              path: 'auth_sign_in',
-              builder: (context, state) => const SignInPage(),
-            )
           ],
         )
       ],
