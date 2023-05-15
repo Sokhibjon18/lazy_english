@@ -15,6 +15,7 @@ class _ChallangePageState extends State<ChallangePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.white,
         shadowColor: Colors.white70,

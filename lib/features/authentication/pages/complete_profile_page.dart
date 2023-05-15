@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class CompleteProfile extends StatelessWidget {
-  const CompleteProfile({super.key});
+class AuthSignUpCompletedPage extends StatelessWidget {
+  const AuthSignUpCompletedPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +59,9 @@ class CompleteProfile extends StatelessWidget {
               width: double.infinity,
               height: 58,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.go('/home');
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF6949FF),
                   shape: const StadiumBorder(),

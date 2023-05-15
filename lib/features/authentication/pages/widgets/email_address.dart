@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class EmailAddress extends StatefulWidget {
-  const EmailAddress({super.key});
+class PhoneNumber extends StatefulWidget {
+  const PhoneNumber({super.key});
 
   @override
-  State<EmailAddress> createState() => _EmailAddressState();
+  State<PhoneNumber> createState() => _PhoneNumberState();
 }
 
-class _EmailAddressState extends State<EmailAddress> {
+class _PhoneNumberState extends State<PhoneNumber> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,24 +17,24 @@ class _EmailAddressState extends State<EmailAddress> {
         children: const [
           SizedBox(height: 40),
           Text(
-            'What is your email address?',
+            'What is your Phone number?',
             style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
           ),
           SizedBox(height: 32),
           Text(
-            'Email',
+            'Phone number',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
           ),
           SizedBox(height: 16),
           TextField(
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
             decoration: InputDecoration(
+              prefixText: '+998 ',
               focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(
-                  color: Color(0xFF6949FF),
-                ),
+                borderSide: BorderSide(color: Color(0xFF6949FF)),
               ),
             ),
+            keyboardType: TextInputType.number,
             cursorColor: Color(0xFF6949FF),
           ),
         ],

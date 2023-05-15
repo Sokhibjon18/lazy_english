@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'list_info_badget.dart';
 
 class BadgetList extends StatefulWidget {
@@ -98,24 +99,33 @@ class _BadgetListState extends State<BadgetList> {
                                         size: 10,
                                         color: Color(0xFF616161),
                                       ),
-                                    ),
-                                    Text(
-                                      listInfoBadges[index][number].xpLevel,
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w600,
-                                          color: Color(0xFF616161)),
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
-                            IconButton(
-                                onPressed: () {},
-                                color: Color(0xFF616161),
-                                splashRadius: 20,
-                                icon: const Icon(Icons.arrow_forward_ios))
-                          ],
+                                      const Padding(
+                                        padding:
+                                            EdgeInsets.only(left: 8, right: 8),
+                                        child: Icon(
+                                          Icons.circle,
+                                          size: 10,
+                                          color: Color(0xFF616161),
+                                        ),
+                                      ),
+                                      Text(
+                                        listInfoBadges[index][number].xpLevel,
+                                        style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Color(0xFF616161)),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                              IconButton(
+                                  onPressed: () {},
+                                  color: Color(0xFF616161),
+                                  splashRadius: 20,
+                                  icon: const Icon(Icons.arrow_forward_ios))
+                            ],
+                          ),
                         ),
                       ),
                     ),

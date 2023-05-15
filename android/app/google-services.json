@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952254597160",
+    "project_id": "lazy-en",
+    "storage_bucket": "lazy-en.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952254597160:android:3a9182ddaa58277b5a4d1d",
+        "android_client_info": {
+          "package_name": "uz.sokhib.lazyen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952254597160-p9bs0jri8cljckbij5j34aljqkv0svuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvTNshl_QSu-EIh1oODvZlV7p0un_D1MM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952254597160-p9bs0jri8cljckbij5j34aljqkv0svuo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
