@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../lists.dart';
 
 class CheckAnswerTab extends StatefulWidget {
@@ -26,7 +27,9 @@ class _CheckAnswerTabState extends State<CheckAnswerTab> {
                     Row(children: const [
                       Text('Correct!',
                           style: TextStyle(
-                              color: Color(0xFFFFFFFF), fontSize: 24, fontWeight: FontWeight.w900)),
+                              color: Color(0xFFFFFFFF),
+                              fontSize: 24,
+                              fontWeight: FontWeight.w900)),
                     ]),
                     Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -35,10 +38,10 @@ class _CheckAnswerTabState extends State<CheckAnswerTab> {
                         width: double.infinity,
                         child: TextButton(
                           style: TextButton.styleFrom(
-                              shape:
-                                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(100)),
                               backgroundColor: const Color(0xFFFFFFFF)),
-                          onPressed: () {},
+                          onPressed: () => context.go('/challange/voice_match'),
                           child: const Text(
                             'CONTINUE',
                             style: TextStyle(
@@ -64,16 +67,22 @@ class _CheckAnswerTabState extends State<CheckAnswerTab> {
                     Row(children: const [
                       Text('Wrong',
                           style: TextStyle(
-                              color: Color(0xFFFFFFFF), fontSize: 24, fontWeight: FontWeight.w700)),
+                              color: Color(0xFFFFFFFF),
+                              fontSize: 24,
+                              fontWeight: FontWeight.w700)),
                     ]),
                     const SizedBox(
                       height: 24,
                     ),
                     const Text('Correct answer:',
                         style: TextStyle(
-                            color: Color(0xFFFFFFFF), fontSize: 24, fontWeight: FontWeight.w700)),
+                            color: Color(0xFFFFFFFF),
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700)),
                     const SizedBox(height: 8),
-                    Row(children: [for (String word in remuvVocabulary) Text('$word ')]),
+                    Row(children: [
+                      for (String word in remuvVocabulary) Text('$word ')
+                    ]),
                     const SizedBox(height: 24),
                     Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -105,12 +114,17 @@ class _CheckAnswerTabState extends State<CheckAnswerTab> {
         },
         style: TextButton.styleFrom(
             elevation: 10,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
-            backgroundColor:
-                remuvVocabulary.isEmpty ? const Color(0xFF543ACC) : const Color(0xFF6949FF)),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100)),
+            backgroundColor: remuvVocabulary.isEmpty
+                ? const Color(0xFF543ACC)
+                : const Color(0xFF6949FF)),
         child: const Text(
           'Check Answers',
-          style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 16, fontWeight: FontWeight.w700),
+          style: TextStyle(
+              color: Color(0xFFFFFFFF),
+              fontSize: 16,
+              fontWeight: FontWeight.w700),
         ),
       ),
     );

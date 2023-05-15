@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lazy_english/features/test_types/find_meaning_of_sentence/page/widgets/find_translation_of_word.dart';
 
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -92,7 +93,7 @@ class _FindMeaningOfSentanceState extends State<FindMeaningOfSentance> {
               width: double.infinity,
               height: 58,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => context.go('/challange/match_words'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF6949FF),
                   shape: const StadiumBorder(),
