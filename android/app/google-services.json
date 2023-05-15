@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "381578707978",
-    "project_id": "lazy-english-uz",
-    "storage_bucket": "lazy-english-uz.appspot.com"
+    "project_number": "952254597160",
+    "project_id": "lazy-en",
+    "storage_bucket": "lazy-en.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:381578707978:android:1128dfe58cf906e4ad4bf3",
+        "mobilesdk_app_id": "1:952254597160:android:3a9182ddaa58277b5a4d1d",
         "android_client_info": {
-          "package_name": "com.example.lazy_english"
+          "package_name": "uz.sokhib.lazyen"
         }
       },
       "oauth_client": [
         {
-          "client_id": "381578707978-k6o068qsmhqc753fvq8ng6rkbt8g3p6k.apps.googleusercontent.com",
+          "client_id": "952254597160-p9bs0jri8cljckbij5j34aljqkv0svuo.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDqgyfoqe9_J7dghtve6GUGU_44E09BZNE"
+          "current_key": "AIzaSyDvTNshl_QSu-EIh1oODvZlV7p0un_D1MM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "381578707978-k6o068qsmhqc753fvq8ng6rkbt8g3p6k.apps.googleusercontent.com",
+              "client_id": "952254597160-p9bs0jri8cljckbij5j34aljqkv0svuo.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "381578707978-j12i74ebqmfvc3t40id7hqhasknih103.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.lazyEnglish"
-              }
             }
           ]
         }

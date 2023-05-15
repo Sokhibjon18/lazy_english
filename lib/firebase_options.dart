@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDqgyfoqe9_J7dghtve6GUGU_44E09BZNE',
-    appId: '1:381578707978:android:1128dfe58cf906e4ad4bf3',
-    messagingSenderId: '381578707978',
-    projectId: 'lazy-english-uz',
-    storageBucket: 'lazy-english-uz.appspot.com',
+    apiKey: 'AIzaSyDvTNshl_QSu-EIh1oODvZlV7p0un_D1MM',
+    appId: '1:952254597160:android:3a9182ddaa58277b5a4d1d',
+    messagingSenderId: '952254597160',
+    projectId: 'lazy-en',
+    storageBucket: 'lazy-en.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD7baJ7WPR-8ABEoeCSHMf1f2J4v-AsraM',
-    appId: '1:381578707978:ios:cb2d73304193d95ead4bf3',
-    messagingSenderId: '381578707978',
-    projectId: 'lazy-english-uz',
-    storageBucket: 'lazy-english-uz.appspot.com',
-    iosClientId: '381578707978-j12i74ebqmfvc3t40id7hqhasknih103.apps.googleusercontent.com',
-    iosBundleId: 'com.example.lazyEnglish',
+    apiKey: 'AIzaSyB6gOcSVlMCiQbe2a5nOPOrmNtX8o3nXL4',
+    appId: '1:952254597160:ios:d9af1dd87dda40d95a4d1d',
+    messagingSenderId: '952254597160',
+    projectId: 'lazy-en',
+    storageBucket: 'lazy-en.appspot.com',
+    iosClientId: '952254597160-v6324qj7dekqkr09hde07imfg3hdor2l.apps.googleusercontent.com',
+    iosBundleId: 'uz.sokhib.lazyEn',
   );
 }
