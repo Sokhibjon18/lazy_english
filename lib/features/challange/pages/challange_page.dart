@@ -23,7 +23,7 @@ class _ChallangePageState extends State<ChallangePage> {
         title: const ChallangeAppBar(),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 18),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
