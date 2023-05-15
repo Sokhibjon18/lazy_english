@@ -87,8 +87,9 @@ class _TargetChallengeListState extends State<TargetChallengeList> {
                     child: Column(
                       children: [
                         LinearPercentIndicator(
-                          animationDuration: 1000,
+                          animationDuration: 400,
                           animation: true,
+                          padding: const EdgeInsets.all(0),
                           barRadius: const Radius.circular(100),
                           lineHeight: 16,
                           percent: targetChallengeInfo[index].protsent,

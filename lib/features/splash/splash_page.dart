@@ -11,8 +11,8 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   Future<void> goToWelcomePage() {
     return Future.delayed(
-      const Duration(milliseconds: 2500),
-      () => context.go('/splash/auth_welcome'),
+      const Duration(milliseconds: 200),
+      () => context.go('/challange/sentence_match_page'),
     );
   }
 

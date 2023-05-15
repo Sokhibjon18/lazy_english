@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'target_widgets/target_challenge_list.dart';
 import 'target_widgets/target_list.dart';
 
-class TargetButton extends StatefulWidget {
-  const TargetButton({super.key});
+class TargetTab extends StatefulWidget {
+  const TargetTab({super.key});
 
   @override
-  State<TargetButton> createState() => _TargetButtonState();
+  State<TargetTab> createState() => _TargetTabState();
 }
 
-class _TargetButtonState extends State<TargetButton> {
+class _TargetTabState extends State<TargetTab> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 24, bottom: 20),
+            padding: const EdgeInsets.symmetric(vertical: 24),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [

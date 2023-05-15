@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/badges_tab/badges_button.dart';
 import 'widgets/challange_app_bar.dart';
-import 'widgets/target_tab/target.dart';
+import 'widgets/target_tab/target_tab.dart';
 
 class ChallangePage extends StatefulWidget {
   const ChallangePage({super.key});
@@ -15,6 +15,7 @@ class _ChallangePageState extends State<ChallangePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -23,7 +24,7 @@ class _ChallangePageState extends State<ChallangePage> {
         title: const ChallangeAppBar(),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -35,9 +36,8 @@ class _ChallangePageState extends State<ChallangePage> {
                     child: Container(
                       height: 45,
                       decoration: BoxDecoration(
-                          color: _selected == true
-                              ? const Color(0xFF6949FF)
-                              : const Color(0xFFFFFFFF),
+                          color:
+                              _selected == true ? const Color(0xFF6949FF) : const Color(0xFFFFFFFF),
                           border: Border.all(color: const Color(0xFF6949FF)),
                           borderRadius: BorderRadius.circular(100)),
                       child: TextButton(
@@ -86,7 +86,7 @@ class _ChallangePageState extends State<ChallangePage> {
                   ),
                 ],
               ),
-              _selected == true ? const TargetButton() : const BadgesButton(),
+              _selected == true ? const TargetTab() : const BadgesButton(),
             ],
           ),
         ),
