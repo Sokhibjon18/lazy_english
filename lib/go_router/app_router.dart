@@ -19,122 +19,122 @@ import 'package:lazy_english/go_router/bottom_navigation_bar.dart';
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
 final GlobalKey<NavigatorState> _shellNavigator = GlobalKey(debugLabel: 'shell');
 
-GoRouter getRouter(key) => GoRouter(
-      debugLogDiagnostics: true,
-      navigatorKey: _rootNavigator,
-      initialLocation: '/splash',
+GoRouter goRouter = GoRouter(
+  debugLogDiagnostics: true,
+  navigatorKey: _rootNavigator,
+  initialLocation: '/splash',
+  routes: [
+    GoRoute(
+      path: '/splash',
+      builder: (context, state) => const SplashPage(),
       routes: [
         GoRoute(
-          path: '/splash',
-          builder: (context, state) => const SplashPage(),
+          path: 'auth_welcome',
+          builder: (context, state) => const WelcomePage(),
           routes: [
             GoRoute(
-              path: 'auth_welcome',
-              builder: (context, state) => const WelcomePage(),
+              path: 'auth_user_info',
+              builder: (context, state) => const UserInfoPage(),
               routes: [
                 GoRoute(
-                  path: 'auth_user_info',
-                  builder: (context, state) => const UserInfoPage(),
-                  routes: [
-                    GoRoute(
-                      path: 'auth_sign_up_completed',
-                      builder: (context, state) => const AuthSignUpCompletedPage(),
-                    ),
-                  ],
+                  path: 'auth_sign_up_completed',
+                  builder: (context, state) => const AuthSignUpCompletedPage(),
                 ),
               ],
-            )
+            ),
           ],
+        )
+      ],
+    ),
+    ShellRoute(
+      navigatorKey: _shellNavigator,
+      builder: (context, state, child) {
+        return BottomNavigationBarPage(body: child, key: state.pageKey);
+      },
+      routes: [
+        GoRoute(
+          path: '/home',
+          pageBuilder: (context, state) {
+            return const NoTransitionPage(
+                child: Scaffold(
+              body: Center(child: Text('home')),
+            ));
+          },
         ),
-        ShellRoute(
-          navigatorKey: _shellNavigator,
-          builder: (context, state, child) {
-            return BottomNavigationBarPage(body: child, key: state.pageKey);
+        GoRoute(
+          path: '/leaderboard',
+          pageBuilder: (context, state) {
+            return const NoTransitionPage(
+              child: LeaderboardPage(),
+            );
           },
           routes: [
             GoRoute(
-              path: '/home',
-              pageBuilder: (context, state) {
-                return const NoTransitionPage(
-                    child: Scaffold(
-                  body: Center(child: Text('home')),
-                ));
-              },
+              path: 'user_profile_details_route',
+              pageBuilder: (context, state) =>
+                  const NoTransitionPage(child: UserProfileDetailsPage()),
             ),
-            GoRoute(
-              path: '/leaderboard',
-              pageBuilder: (context, state) {
-                return const NoTransitionPage(
-                  child: LeaderboardPage(),
-                );
-              },
-              routes: [
-                GoRoute(
-                  path: 'user_profile_details_route',
-                  pageBuilder: (context, state) =>
-                      const NoTransitionPage(child: UserProfileDetailsPage()),
-                ),
-              ],
-            ),
-            GoRoute(
-              path: '/challange',
-              pageBuilder: (context, state) {
-                return const NoTransitionPage(
-                  child: ChallangePage(),
-                );
-              },
-              routes: [
-                GoRoute(
-                  path: 'quiz_king',
-                  parentNavigatorKey: _rootNavigator,
-                  builder: (context, state) => const LoadingPage(),
-                ),
-                GoRoute(
-                  path: 'sentence_match_page',
-                  parentNavigatorKey: _rootNavigator,
-                  builder: (context, state) => const SentenceMatchPage(),
-                ),
-                GoRoute(
-                  path: 'voice_match',
-                  parentNavigatorKey: _rootNavigator,
-                  builder: (context, state) => const VoiceMatchPage(),
-                ),
-                GoRoute(
-                  path: 'find_meaning',
-                  parentNavigatorKey: _rootNavigator,
-                  builder: (context, state) => const FindMeaningOfSentance(),
-                ),
-                GoRoute(
-                  path: 'match_words',
-                  parentNavigatorKey: _rootNavigator,
-                  builder: (context, state) => const MatchWordPairPage(),
-                ),
-                GoRoute(
-                  path: 'lesson_completed',
-                  parentNavigatorKey: _rootNavigator,
-                  builder: (context, state) => const CompletedPage(),
-                ),
-              ],
-            ),
-            GoRoute(
-              path: '/premium',
-              pageBuilder: (context, state) {
-                return const NoTransitionPage(
-                    child: Scaffold(
-                  body: Center(child: Text('premium')),
-                ));
-              },
-            ),
-            GoRoute(
-              path: '/account',
-              pageBuilder: (context, state) {
-                return const NoTransitionPage(
-                    child: Scaffold(
-                  body: Center(child: Text('account')),
-                ));
-              },
-            )
           ],
         ),
+        GoRoute(
+          path: '/challange',
+          pageBuilder: (context, state) {
+            return const NoTransitionPage(
+              child: ChallangePage(),
+            );
+          },
+          routes: [
+            GoRoute(
+              path: 'quiz_king',
+              parentNavigatorKey: _rootNavigator,
+              builder: (context, state) => const LoadingPage(),
+            ),
+            GoRoute(
+              path: 'sentence_match_page',
+              parentNavigatorKey: _rootNavigator,
+              builder: (context, state) => const SentenceMatchPage(),
+            ),
+            GoRoute(
+              path: 'voice_match',
+              parentNavigatorKey: _rootNavigator,
+              builder: (context, state) => const VoiceMatchPage(),
+            ),
+            GoRoute(
+              path: 'find_meaning',
+              parentNavigatorKey: _rootNavigator,
+              builder: (context, state) => const FindMeaningOfSentance(),
+            ),
+            GoRoute(
+              path: 'match_words',
+              parentNavigatorKey: _rootNavigator,
+              builder: (context, state) => const MatchWordPairPage(),
+            ),
+            GoRoute(
+              path: 'lesson_completed',
+              parentNavigatorKey: _rootNavigator,
+              builder: (context, state) => const CompletedPage(),
+            ),
+          ],
+        ),
+        GoRoute(
+          path: '/premium',
+          pageBuilder: (context, state) {
+            return const NoTransitionPage(
+                child: Scaffold(
+              body: Center(child: Text('premium')),
+            ));
+          },
+        ),
+        GoRoute(
+          path: '/account',
+          pageBuilder: (context, state) {
+            return const NoTransitionPage(
+                child: Scaffold(
+              body: Center(child: Text('account')),
+            ));
+          },
+        )
       ],
-    );
+    ),
+  ],
+);
