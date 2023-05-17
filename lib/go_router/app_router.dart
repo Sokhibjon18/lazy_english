@@ -6,6 +6,7 @@ import 'package:lazy_english/features/authentication/pages/user_info_page.dart';
 import 'package:lazy_english/features/authentication/pages/welcome_page.dart';
 import 'package:lazy_english/features/challange/pages/challange_page.dart';
 import 'package:lazy_english/features/comleted_page/completed_page.dart';
+import 'package:lazy_english/features/home/page/home_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/leaderboard_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/user_profile_details_page.dart';
 import 'package:lazy_english/features/splash/splash_page.dart';
@@ -55,10 +56,7 @@ GoRouter goRouter = GoRouter(
         GoRoute(
           path: '/home',
           pageBuilder: (context, state) {
-            return const NoTransitionPage(
-                child: Scaffold(
-              body: Center(child: Text('home')),
-            ));
+            return const NoTransitionPage(child: HomePage());
           },
         ),
         GoRoute(
