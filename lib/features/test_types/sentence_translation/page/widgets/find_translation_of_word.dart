@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:lazy_english/features/test_types/find_meaning_of_sentence/page/widgets/sentences_list.dart';
+import 'package:lazy_english/features/test_types/sentence_translation/page/widgets/sentences_list.dart';
 
 class FindTranslationOfWord extends StatefulWidget {
   const FindTranslationOfWord({super.key});
@@ -48,8 +48,7 @@ class _FindTranslationOfWordState extends State<FindTranslationOfWord> {
                     padding: const EdgeInsets.all(20.0),
                     child: AutoSizeText(
                       sentenceListIndex,
-                      style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.w700),
+                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                       textAlign: TextAlign.center,
                     ),
                   ),

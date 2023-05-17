@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lazy_english/features/test_types/match_word_pair.dart/pages/widgets/words_list.dart';
+import 'package:lazy_english/features/test_types/word_match/pages/widgets/words_list.dart';
 
 class FindMatchPair extends StatefulWidget {
   const FindMatchPair({super.key});
@@ -23,8 +23,7 @@ class _FindMatchPairState extends State<FindMatchPair> {
               itemCount: 6,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding:
-                      const EdgeInsets.only(right: 10, bottom: 12, top: 12),
+                  padding: const EdgeInsets.only(right: 10, bottom: 12, top: 12),
                   child: GestureDetector(
                     onTap: () {
                       isCorrectInUzbek = [
@@ -61,9 +60,7 @@ class _FindMatchPairState extends State<FindMatchPair> {
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w700,
-                              color: isCorrectInUzbek[index] == true
-                                  ? Colors.white
-                                  : Colors.black,
+                              color: isCorrectInUzbek[index] == true ? Colors.white : Colors.black,
                             ),
                           ),
                         ),

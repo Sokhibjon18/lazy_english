@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lazy_english/features/test_types/find_meaning_of_sentence/page/widgets/find_translation_of_word.dart';
+import 'package:lazy_english/features/test_types/sentence_translation/page/widgets/find_translation_of_word.dart';
 
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -87,8 +87,7 @@ class _FindMeaningOfSentanceState extends State<FindMeaningOfSentance> {
           const FindTranslationOfWord(),
           const Divider(color: Color(0xFFEEEEEE)),
           Padding(
-            padding:
-                const EdgeInsets.only(top: 24, bottom: 24, left: 24, right: 24),
+            padding: const EdgeInsets.only(top: 24, bottom: 24, left: 24, right: 24),
             child: SizedBox(
               width: double.infinity,
               height: 58,
