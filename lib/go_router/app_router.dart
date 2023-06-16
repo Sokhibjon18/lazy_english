@@ -6,6 +6,7 @@ import 'package:lazy_english/features/authentication/pages/user_info_page.dart';
 import 'package:lazy_english/features/authentication/pages/welcome_page.dart';
 import 'package:lazy_english/features/challange/pages/challange_page.dart';
 import 'package:lazy_english/features/comleted_page/completed_page.dart';
+import 'package:lazy_english/features/firestore_upload/pages/firestore_upload.dart';
 import 'package:lazy_english/features/home/page/home_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/leaderboard_page.dart';
 import 'package:lazy_english/features/leaderboard/pages/user_profile_details_page.dart';
@@ -18,12 +19,13 @@ import 'package:lazy_english/features/test_types/voice_match/pages/voice_match_p
 import 'package:lazy_english/go_router/bottom_navigation_bar.dart';
 
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigator = GlobalKey(debugLabel: 'shell');
+final GlobalKey<NavigatorState> _shellNavigator =
+    GlobalKey(debugLabel: 'shell');
 
 GoRouter goRouter = GoRouter(
   debugLogDiagnostics: true,
   navigatorKey: _rootNavigator,
-  initialLocation: '/splash',
+  initialLocation: '/home',
   routes: [
     GoRoute(
       path: '/splash',
@@ -117,10 +119,7 @@ GoRouter goRouter = GoRouter(
         GoRoute(
           path: '/premium',
           pageBuilder: (context, state) {
-            return const NoTransitionPage(
-                child: Scaffold(
-              body: Center(child: Text('premium')),
-            ));
+            return const NoTransitionPage(child: FirestoreUploadPage());
           },
         ),
         GoRoute(

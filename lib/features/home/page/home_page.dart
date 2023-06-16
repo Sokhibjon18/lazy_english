@@ -8,11 +8,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: TextButton(
-          onPressed: () {
-            HomeRepository().getChallenges();
-          },
-          child: Text('Get challenges'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () {
+                HomeRepository().getChallenges();
+              },
+              child: const Text('Get challenges'),
+            ),
+            TextButton(
+                onPressed: () {
+                  HomeRepository().getLessons();
+                },
+                child: const Text('Get lessons'))
+          ],
         ),
       ),
     );

@@ -12,68 +12,66 @@ class LevelWidget extends StatefulWidget {
 class _LevelWidgetState extends State<LevelWidget> {
   @override
   Widget build(BuildContext context) {
-    return  Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: LinearPercentIndicator(
-                          lineHeight: 12,
-                          width: MediaQuery.of(context).size.width * 2 / 3,
-                          percent: 0.3,
-                          barRadius: const Radius.circular(100),
-                          backgroundColor: const Color(0xFFEEEEEE),
-                          progressColor: const Color(0xFF6949FF),
-                        ),
-                      ),
-                      SvgPicture.asset('assets/vectors/small_dimond.svg'),
-                      const Text(
-                        '957',
-                        style: TextStyle(
-                            color: Color(0xFF212121),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700),
-                      )
-                    ],
-                  ),
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Row(
+            children: [
+              Expanded(
+                child: LinearPercentIndicator(
+                  lineHeight: 12,
+                  width: MediaQuery.of(context).size.width * 2 / 3,
+                  percent: 0.3,
+                  barRadius: const Radius.circular(100),
+                  backgroundColor: const Color(0xFFEEEEEE),
+                  progressColor: const Color(0xFF6949FF),
                 ),
-                Container(
-                  decoration: const BoxDecoration(
-                      border:
-                          Border(bottom: BorderSide(color: Color(0xFFEEEEEE)))),
-                  child: const Padding(
-                    padding: EdgeInsets.only(top: 24, bottom: 24),
-                    child: Text(
-                      'Translate this sentence',
-                      textAlign: TextAlign.start,
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFF212121)),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 24, bottom: 30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset('assets/vectors/sound.svg'),
-                      const Text(
-                        'I walk and she swims.',
-                        style: TextStyle(
-                            color: Color(0xFF212121),
-                            fontSize: 24,
-                            fontWeight: FontWeight.w700),
-                      ),
-                    ],
-                  ),
-                ),
-               
-              ],
-            );
+              ),
+              SvgPicture.asset('assets/vectors/small_dimond.svg'),
+              const Text(
+                '957',
+                style: TextStyle(
+                    color: Color(0xFF212121),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700),
+              )
+            ],
+          ),
+        ),
+        Container(
+          decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: Color(0xFFEEEEEE)))),
+          child: const Padding(
+            padding: EdgeInsets.only(top: 24, bottom: 24),
+            child: Text(
+              'Translate this sentence',
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF212121)),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 24, bottom: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SvgPicture.asset('assets/vectors/sound.svg'),
+              const Text(
+                'I walk and she swims.',
+                style: TextStyle(
+                    color: Color(0xFF212121),
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
