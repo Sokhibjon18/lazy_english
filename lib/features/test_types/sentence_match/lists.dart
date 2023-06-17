@@ -1,90 +1,24 @@
-import 'package:flutter/material.dart';
+class WordChip {
+  late int bottomIndex;
+  String text;
+  bool picked;
 
-List<String> vocabulary = [
-  'Olma',
-  'Banan',
-  'Anor',
-  'Uzum',
-  'Mango',
-  'Qulpnayhjghkfhfh'
-];
+  WordChip({required this.text, required this.picked});
+}
 
-List<String> remuvVocabulary = [];
-
-List<Color> buttonColors = [
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-];
-List<Color> colorButton = [
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
-  const Color(0xFFFFFFFF),
+List<WordChip> words = [
+  WordChip(text: 'I', picked: true),
+  WordChip(text: 'text', picked: true),
+  WordChip(text: 'walk', picked: true),
+  WordChip(text: 'text2', picked: true),
+  WordChip(text: 'and', picked: true),
+  WordChip(text: 'text3', picked: true),
+  WordChip(text: 'she', picked: true),
+  WordChip(text: 'text4', picked: true),
+  WordChip(text: 'swims', picked: true)
 ];
 
-List<Color> selectedButtonColor = [
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-  const Color(0xFFEEEEEE),
-];
-
-List<Color> textColors = [
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-];
-List<Color> colorText = [
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-  const Color(0xFF212121),
-];
-String a = 'I walk and she swim';
-List<String> answer = ['I', 'walk', 'and', 'she', 'swim'];
+List<WordChip> removeWords = [];
 
 bool compareLists(List list1, List list2) {
   if (list1.length != list2.length || list1.runtimeType != list2.runtimeType) {
@@ -99,24 +33,6 @@ bool compareLists(List list1, List list2) {
   return true;
 }
 
-List<String> separatevocabulary(String text) {
-  List<String> vocabulary = text.split(' ');
-  return vocabulary;
-}
+List<String> answers = ['I', 'Walk', 'and', 'she', 'swims'];
 
-@override
-void initState() {
-  vocabulary.addAll(separatevocabulary(a));
-  vocabulary.shuffle();
-}
-
-Map<String, Color> vovabularys = {
-  'Olma': const Color(0xFFFFFFFF),
-  'Anor': const Color(0xFFFFFFFF),
-  'Salom': const Color(0xFFFFFFFF),
-  'Qovun': const Color(0xFFFFFFFF),
-  'Bratan': const Color(0xFFFFFFFF),
-  'Qondaye': const Color(0xFFFFFFFF),
-  'Tinchmi': const Color(0xFFFFFFFF),
-  'U': const Color(0xFFFFFFFF),
-};
+bool presssed = true;
