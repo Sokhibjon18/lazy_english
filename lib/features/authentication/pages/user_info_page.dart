@@ -15,7 +15,7 @@ class UserInfoPage extends StatefulWidget {
   State<UserInfoPage> createState() => _UserInfoPageState();
 }
 
-CarouselController carouselController = CarouselController();
+CarouselController _carouselController = CarouselController();
 int currentPage = 0;
 double percent = 0.25;
 
@@ -33,7 +33,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
               Navigator.pop(context);
               percent = 0.25;
             } else {
-              carouselController.previousPage();
+              _carouselController.previousPage();
               percent = percent - 0.25;
             }
           },
@@ -51,7 +51,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CarouselSlider.builder(
-            carouselController: carouselController,
+            carouselController: _carouselController,
             itemCount: 4,
             itemBuilder:
                 (BuildContext context, int itemIndex, int pageViewIndex) {
@@ -79,7 +79,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
                           context.go(
                               '/splash/auth_welcome/auth_user_info/auth_sign_up_completed');
                         } else {
-                          carouselController.nextPage();
+                          _carouselController.nextPage();
                           percent = percent + 0.25;
                         }
                       });
